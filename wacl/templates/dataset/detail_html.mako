@@ -4,7 +4,7 @@
     <div class="well">
         <h3>Sidebar</h3>
         <p>
-            Content
+            How to cite: Her, One-Soon, Harald Hammarström and Marc Allassonnière-Tang. 2022. Defining numeral classifiers and identifying classifier languages of the world. Linguistics Vanguard. (Available online at https://wacl.clld.org)
         </p>
     </div>
 </%def>
