@@ -2,11 +2,14 @@
 
 <%def name="sidebar()">
     <div class="well">
-        <h3>How to cite</h3>
+        <h3>Special thanks to</h3>
         <p>
-Her, One-Soon, Harald Hammarström and Marc Allassonnière-Tang. 2022. 
-Defining numeral classifiers and identifying classifier languages of the world. 
-Linguistics Vanguard. (Available online at https://wacl.clld.org)
+Robert Forkel and the MPI team.
+Gerd Carling and the Language Typology and Evolution Research Group at Lund university.
+All the contributors (Research assistants, postdoctoral researchers, and researchers).
+Marcus och Amalia Wallenbergs Minnesfond.
+Joint Programming Initiative on Cultural Heritage.
+French National Research Agency.
         </p>
     </div>
 </%def>
