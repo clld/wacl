@@ -11,6 +11,14 @@
             as well as the
             ${h.external_link('https://github.com/cldf-datasets/wacl/releases', label=_('released version'))}
             of the dataset.
+        <h3>Special thanks to</h3>
+        <p>
+Robert Forkel and the MPI team.
+Gerd Carling and the Language Typology and Evolution Research Group at Lund university.
+All the contributors (Research assistants, postdoctoral researchers, and researchers).
+Marcus och Amalia Wallenbergs Minnesfond.
+Joint Programming Initiative on Cultural Heritage.
+French National Research Agency.
         </p>
     </div>
 </%def>
