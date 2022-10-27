@@ -3,7 +3,7 @@ import collections
 from pyramid.config import Configurator
 
 from clld_glottologfamily_plugin import util
-
+from clld.db.models import common
 from clld.interfaces import IMapMarker, IValueSet, IValue, IDomainElement
 from clldutils.svg import pie, icon, data_url
 
@@ -30,11 +30,13 @@ class LanguageByFamilyMapMarker(util.LanguageByFamilyMapMarker):
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
+    settings['clld_markdown_plugin'] = {
+        'model_map': {'ValueTable': common.ValueSet},
+        'function_map': {}
+    }
     config = Configurator(settings=settings)
     config.include('clld.web.app')
-
     config.include('clldmpg')
-
 
     config.registry.registerUtility(LanguageByFamilyMapMarker(), IMapMarker)
 

@@ -26,17 +26,18 @@ def main(args):
         wacl.__name__,
         id=wacl.__name__,
         domain='wacl.clld.org',
-
+        name=args.cldf.properties.get('dc:title'),
+        description=args.cldf.properties.get('dc:description'),
         publisher_name="Max Planck Institute for Evolutionary Anthropology",
         publisher_place="Leipzig",
         publisher_url="https://www.eva.mpg.de",
         license="http://creativecommons.org/licenses/by/4.0/",
         jsondata={
             'license_icon': 'cc-by.png',
-            'license_name': 'Creative Commons Attribution 4.0 International License'},
-
+            'license_name': 'Creative Commons Attribution 4.0 International License',
+            'citation': args.cldf.properties.get('dc:bibliographicCitation')
+        },
     )
-
 
     contrib = data.add(
         common.Contribution,
@@ -63,12 +64,13 @@ def main(args):
     refs = collections.defaultdict(list)
 
 
-    for param in args.cldf.iter_rows('ParameterTable', 'id', 'name'):
+    for param in args.cldf.iter_rows('ParameterTable', 'id', 'name', 'description'):
         data.add(
             models.Feature,
             param['id'],
             id=param['id'],
             name='{} [{}]'.format(param['name'], param['id']),
+            description=param['description'],
     )
     for pid, codes in itertools.groupby(
         sorted(
