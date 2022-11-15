@@ -2,7 +2,7 @@ import itertools
 import collections
 
 from pycldf import Sources
-from clldutils.misc import nfilter
+from clldutils.misc import nfilter, slug
 from clldutils.color import qualitative_colors
 from clld.cliutil import Data, bibtex2source
 from clld.db.meta import DBSession
@@ -21,7 +21,7 @@ def main(args):
     assert args.glottolog, 'The --glottolog option is required!'
 
     data = Data()
-    data.add(
+    ds = data.add(
         common.Dataset,
         wacl.__name__,
         id=wacl.__name__,
@@ -46,6 +46,12 @@ def main(args):
         name=args.cldf.properties.get('dc:title'),
         description=args.cldf.properties.get('dc:bibliographicCitation'),
     )
+    for i, name in enumerate(["One-Soon Her", "Harald Hammarström", "Marc Allassonnière-Tang"]):
+        DBSession.add(common.Editor(
+            dataset=ds,
+            ord=i + 1,
+            contributor=common.Contributor(id=slug(name.split()[-1]), name=name)
+        ))
 
     for lang in args.cldf.iter_rows('LanguageTable', 'id', 'glottocode', 'name', 'latitude', 'longitude'):
         data.add(

@@ -2,24 +2,16 @@
 
 <%def name="sidebar()">
     <div class="well">
-        <h3>How to cite</h3>
-        <p>If you use WACL data, please cite the documentation paper</p>
-        <blockquote>
-            ${req.dataset.jsondata['citation']}
-        </blockquote>
-        <p>
-            as well as the
-            ${h.external_link('https://github.com/cldf-datasets/wacl/releases', label=_('released version'))}
-            of the dataset.
         <h3>Special thanks to</h3>
-        <p>
-Robert Forkel and the MPI team.
-Gerd Carling and the Language Typology and Evolution Research Group at Lund university.
-All the contributors (Research assistants, postdoctoral researchers, and researchers).
-Marcus och Amalia Wallenbergs Minnesfond.
-Joint Programming Initiative on Cultural Heritage.
-French National Research Agency.
-        </p>
+        <ul>
+            <li>Robert Forkel and the MPI team. </li>
+            <li>Gerd Carling and the Language Typology and Evolution Research Group at Lund university </li>
+            <li>All the contributors (Research assistants, postdoctoral researchers, and researchers). The full list can be found in the documentation paper </li>
+            <li>Taiwan’s National Science and Technology Council </li>
+            <li>Marcus och Amalia Wallenbergs Minnesfond </li>
+            <li>Joint Programming Initiative on Cultural Heritage </li>
+            <li>French National Research Agency </li>
+        </ul>
     </div>
 </%def>
 
@@ -29,5 +21,26 @@ French National Research Agency.
     The World Atlas of Classifier Languages (WACL) and its documentation paper present steps to identify a numeral classifier language and a database of 3338 languages, of which 723 languages have been identified as having a numeral classifier system.
 </p>
 <p>
-    ${req.dataset.description}
+    WACL has been systematically constructed over the last ten years via a manual survey of relevant literature and also an automatic scan of digitized grammars followed by manual checking. WACL presents a precise definition of numeral classifiers, steps to identify a numeral classifier language, and a database of languages that have been identified as having a numeral classifier system. The open-access release of WACL is thus a significant contribution to linguistic research in providing (i) a precise definition and examples of how to identify numeral classifiers in language data and (ii) the largest dataset of numeral classifier languages in the world. As such it offers researchers a rich and stable data source for conducting typological, quantitative, and phylogenetic analyses on numeral classifiers. The database will also be expanded with additional features relating to numeral classifiers in the future in order to allow more fine-grained analyses.
 </p>
+
+<h3>How to use WACL</h3>
+<p>
+  The features included in WACL can be accessed through the item 'Parameters' in the navigation bar. After navigating to a particular feature, a second navigation bar with feature values, references, and export options is available.
+</p>
+<p>
+  An alphabetical search for languages and language families is available through the item 'Languages' on the navigation bar. A search by map region is also available.
+</p>
+<p>
+  The references for each language included in the database can be found at the item 'Sources' in the navigation bar.
+</p>
+
+<h3>How to cite WACL</h3>
+<p>
+ Please cite the database in the following way. We also recommend that you cite references for each language when giving individual examples.
+</p>
+    <pre>
+Her, One-Soon, Harald Hammarström and Marc Allassonnière-Tang. (2022).
+Defining numeral classifiers and identifying classifier languages of the world.
+<i>Linguistics Vanguard </i> 
+https://doi.org/10.1515/lingvan-2022-0006</pre>
