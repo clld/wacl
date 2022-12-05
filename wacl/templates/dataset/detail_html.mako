@@ -25,6 +25,10 @@
 </p>
 
 <h3>How to use WACL</h3>
+
+<p>
+  The documentation paper of the database is published and available at <a href="https://doi.org/10.1515/lingvan-2022-0006">https://doi.org/10.1515/lingvan-2022-0006</a>. 
+</p>
 <p>
   The features included in WACL can be accessed through the item 'Parameters' in the navigation bar. After navigating to a particular feature, a second navigation bar with feature values, references, and export options is available.
 </p>
