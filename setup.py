@@ -20,13 +20,10 @@ setup(
     zip_safe=False,
     install_requires=[
         'clld',  # >=7.0
-
         'clld-glottologfamily-plugin>=4.0',
         'pyglottolog',
-
-
+        'psycopg2',
         'clldmpg',
-
 ],
 extras_require={
         'dev': ['flake8', 'waitress'],
