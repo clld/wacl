@@ -5,10 +5,7 @@ from clld.web.datatables.base import LinkCol, Col, LinkToMapCol
 from clld_glottologfamily_plugin.models import Family
 from clld_glottologfamily_plugin.datatables import FamilyCol
 
-
 from wacl import models
-
-
 
 
 class Languages(datatables.Languages):
